@@ -1,0 +1,16 @@
+<button  id= "render" onclick="">test</button>
+
+<SCRIPT>
+const render = document.getElementById("render")
+const ipc = require("electron").ipcRenderer
+ 
+render.addEventListener('click',function(e){
+    console.log(e)
+    ipc.send("global",{
+                event:"login",
+                data:{
+                    
+                }
+            })
+})
+</SCRIPT>
